@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * First program in C, prints exactly a text without using printf
+ *main - First program in C, prints exactly a text without using printf.
  *
- * Return : Nothing
+ * Return: Nothing.
  */
 
 int main(void)
