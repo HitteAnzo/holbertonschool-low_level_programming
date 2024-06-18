@@ -9,7 +9,7 @@ int main(void)
 {
 	int a;
 
-	for (a = 0; a <= 9; i++)
+	for (a = 0; a <= 9; a++);
 	{
 		putchar(048 + a);
 	}
