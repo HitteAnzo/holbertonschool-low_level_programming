@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /* main - Display a random number.
  *
  * Return: Nothing. */
+
 int main(void)
 {
 	int n;
