@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_alphabet_x10 - Print x10 times alphabet in lowercase.
  *
@@ -19,5 +19,6 @@ void print_alphabet_x10(void)
 			c++;
 		}
 		_putchar('\n');
+		return(0)
 	}
 }
