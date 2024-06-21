@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 /**
- *Prints from the argument to 98 .
- * Return: void
+ * print_to_98 - Prints all natural numbers from n to 98
+ * @n: The starting number
+ *
+ * Description: This function prints all natural numbers from the
+ * starting number 'n' to 98, followed by a new line.
  */
 void print_to_98(int n)
 {
