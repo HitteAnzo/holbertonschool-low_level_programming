@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * -prints from the argument to the int 98
+ *Prints from the argument to 98 .
  * Return: void
  */
 void print_to_98(int n)
