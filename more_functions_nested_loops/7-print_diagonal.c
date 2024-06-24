@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_line - Print diagonal line on the terminal.
+ * print_diagonal - Print diagonal line on the terminal.
  * @n: the number of times the character \ should be printed.
  *
  * Description: If n is 0 or less, only prints \n.
