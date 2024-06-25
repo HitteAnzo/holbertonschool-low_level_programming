@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- *
  * reset_to_98 - point a int
  * @n: int
  */
