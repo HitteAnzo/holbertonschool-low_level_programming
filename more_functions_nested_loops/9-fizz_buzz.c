@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print all numbers 1 to 100. 
+ * main - print all numbers 1 to 100
  * Description: Add Fizz, Buzz and FizzBuzz depenting of the multiple.
  * Return: 0 on success.
  */
