@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * puts2 - every other character of a string
- * @str: number
+ * puts2 - Other character of a string.
+ * @str: number.
  *
  * Return: void
  */
