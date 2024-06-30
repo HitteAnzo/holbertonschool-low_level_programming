@@ -1,20 +1,24 @@
 #include "main.h"
 
 /**
- * puts2 - Other character of a string.
- * @str: number.
+ *puts2 - Prints every even character index of a string.
+ *@str: Pointer to the string to print.
  *
- * Return: void
+ *Return: void.
  */
 
 void puts2(char *str)
 {
+	int count = 0;
 	int i = 0;
 
-	for (i = 0; str[i] != 0; i++)
+	while (str[count])
+		count++;
+
+	while (i < count)
 	{
-		if  ((i % 2) == 0)
-			_putchar(str[i]);
+		_putchar(str[i]);
+		i += 2;
 	}
 	_putchar('\n');
 }
