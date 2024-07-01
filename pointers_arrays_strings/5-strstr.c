@@ -2,7 +2,7 @@
 #include "stdio.h"
 /**
  *_strstr - locates a substring
- *@haystack: string to search 
+ *@haystack: string to search
  *@needle: substring to look for
  *
  *Return: pointer to the beginning of the located substring
