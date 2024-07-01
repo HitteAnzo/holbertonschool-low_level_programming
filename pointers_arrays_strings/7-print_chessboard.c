@@ -2,7 +2,7 @@
 #include "main.h"
 
 /*
- * print_chessboard - Prints the chessboard represented by a 2D array of characters.
+ * print_chessboard - Prints the chessboard in array of characters.
  * @a: Pointer to the 2D array of characters representing the chessboard.
  */
 void print_chessboard(char (*a)[8])
