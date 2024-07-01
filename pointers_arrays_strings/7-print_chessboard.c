@@ -4,6 +4,7 @@
 /*
  * print_chessboard - Prints the chessboard in array of characters.
  * @a: Pointer to the 2D array of characters representing the chessboard.
+ * This function iterates through each row of the chessboard array and prints.
  */
 void print_chessboard(char (*a)[8])
 {
