@@ -5,6 +5,7 @@
  * * power_operation - finds the square root of a number.
  * @n: the number for which to calculate the square root.
  * @c: the candidate to be the square root of n.
+ * Return: square root or -1.
  */
 int power_operation(int n, int c)
 {
@@ -21,7 +22,7 @@ int power_operation(int n, int c)
 /**
  * * _sqrt_recursion - returns the square root of a number.
  * @n: the number for which to calculate the square root.
- *
+ * Return: natural square of root.
  */
 int _sqrt_recursion(int n)
 {
