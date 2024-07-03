@@ -15,7 +15,7 @@ int power_operation(int n, int c)
 	}
 	return (0 + power_operation(n, c + 1));
 
-
+}
 /**
  *
  */ 
