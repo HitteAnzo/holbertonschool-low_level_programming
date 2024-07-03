@@ -4,7 +4,7 @@
 /**
  *
  */
-int is_prime( int n, int c)
+int is_prime(int n, int c)
 {
 	if (n == c)
 		return (1);
