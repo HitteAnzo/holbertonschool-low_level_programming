@@ -16,15 +16,15 @@ char *create_array(unsigned int size, char c)
 	if (a == NULL)
 		return (NULL);
 
-	if (size != 0);
+	if (size != 0)
 	{
 		for (i = 0; i < size; i++)
 		{
 			*(a + i) = c;
 		}
 
-		return (a)
+		return (a);
 	}
 	else
-		return (0);
+		return (null);
 }
