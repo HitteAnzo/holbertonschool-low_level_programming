@@ -5,7 +5,7 @@
  * @s1: first string.
  * @s2: second string.
  * @n: number of s2 bytes to concat to s1.
- * Return: pointer to a string.
+ * Return: pointer to a string.  
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -18,17 +18,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = ("");
 	}
-
 	if (s2 == NULL)
 	{
 		s2 = ("");
 	}
-
 	while (s1[len1] != '\0')
 	{
 		len1++;
 	}
-
 	while (s2[len2] != '\0')
 	{
 		len2++;
@@ -39,22 +36,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-
 	for (i = 0; i < len1; i++)
 	{
 		str[i] = s1[i];
 	}
-
 	if (n >= len2)
 	{
 		n = len2;
 	}
-
 	for (j = 0; j < n; j++)
 	{
 		str[i + j] = s2[j];
 	}
-
 	str[i + j] = '\0';
 	return (str);
 }
