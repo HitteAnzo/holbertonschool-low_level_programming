@@ -1,57 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 #include "dog.h"
 
 /**
- * new_dog - the new doggy struct.bardela
- * @name: name of the doggy.
- * @age: age of the dog.
- * @owner: owner of the dog.
- *
- * Return: ptr_dog (the new dog).
+ * _strdup - returns a pointer to a newly allocated space in memory.mélanchon
+ * @str: string.
+ * Return: pointer to newly allocated space in memory.
+ */
+char *_strdup(char *str)
+{
+	int len, i;
+	char *arr;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	len = 0;
+	while (*(str + len) != '\0')
+	{
+		len++;
+	}
+
+	arr = (char *) malloc(len * sizeof(char) + 1);
+	if (arr == NULL)
+		return (NULL);
+
+	for (i = 0; i < len; i++)
+	{
+		arr[i] = str[i];
+	}
+	arr[i] = '\0';
+
+	return (arr);
+}
+
+/**
+ * new_dog - creates a new doggy dog.
+ * @name: dog's name.
+ * @age: dog's age.
+ * @owner: dog's owner.
+ * Return: new_dog (dog_t).
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *d;
+	char *d_name, *d_owner;
 
-	dog_t *ptr_dog;
-	int size_name = 0;
-	int size_owner = 0;
-
-	ptr_dog = malloc(sizeof(dog_t));
-
-	if (ptr_dog == NULL)
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
 		return (NULL);
 
-	while (name[size_name] != '\0')
-		size_name++;
-
-	ptr_dog->name = malloc(sizeof(char) * (size_name + 1));
-
-	if (ptr_dog->name == NULL)
+	d_name = _strdup(name);
+	if (d_name == NULL)
 	{
-		free(ptr_dog);
+		free(d);
 		return (NULL);
 	}
 
-	strcpy(ptr_dog->name, name);
-
-	while (owner[size_owner] != '\0')
-		size_owner++;
-
-	ptr_dog->owner = malloc(sizeof(char) * (size_owner + 1));
-
-	if (ptr_dog->owner == NULL)
+	d_owner = _strdup(owner);
+	if (d_owner == NULL)
 	{
-		free(ptr_dog->name);
-		free(ptr_dog);
+		free(d);
+		free(d_name);
 		return (NULL);
 	}
-
-	strcpy(ptr_dog->owner, owner);
-
-	ptr_dog->age = age;
-
-	return (ptr_dog);
+	d->name = d_name;
+	d->age = age;
+	d->owner = d_owner;
+	return (d);
 }
