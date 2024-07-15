@@ -7,7 +7,7 @@
  * @n: unsigned int.
  *
  * Return: sum.
- */ 
+ */
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list a;
