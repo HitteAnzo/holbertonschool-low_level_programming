@@ -5,7 +5,6 @@
 /**
  * sum_them_all - sum all parameters. MLP.
  * @n: unsigned int.
- *
  * Return: sum.
  */
 int sum_them_all(const unsigned int n, ...)
