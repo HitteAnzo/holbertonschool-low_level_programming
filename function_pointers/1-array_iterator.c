@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * array_iterator - exec a function.
+ * array_iterator - exec a function.MLP
  * @array: pointer to array.
  * @size: size of array.
  * @action: pointer to a function taking an int pointer as parameter.
