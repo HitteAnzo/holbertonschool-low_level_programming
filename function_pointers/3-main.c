@@ -8,7 +8,7 @@
  * @argv: argument.
  * Return: 0 if success.
  */
-int main(int argc, char *argv[]);
+int main(int argc, char *argv[])
 {
 	int num1, num2;
 	int (*f)(int, int);
@@ -36,5 +36,5 @@ int main(int argc, char *argv[]);
         }
 
         printf("%d\n", f(num1, num2));
-        return ();
+        return (0);
 }
