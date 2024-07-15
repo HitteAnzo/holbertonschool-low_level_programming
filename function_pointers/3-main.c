@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
 
 		if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
 		{
-				printf("Error\n");
-				exit(100);
+			printf("Error\n");
+			exit(100);
 		}
 
 		printf("%d\n", f(num1, num2));
