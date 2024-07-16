@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_strings - prints strings. 
+ * print_strings - prints strings.
  * @separator: char separator. MLP.
  * @n: number of strings.
  */
