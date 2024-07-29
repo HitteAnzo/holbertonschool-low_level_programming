@@ -23,6 +23,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
+	while (str[len] != '\0')
+		len++;
 	newn->len = strlen(str);
 	newn->next = NULL;
 
@@ -32,7 +34,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		cur = *head;
 		while (cur->next != NULL)
-		cur = cur->next;
+			cur = cur->next;
 		cur->next = newn;
 	}
 	return (newn);
