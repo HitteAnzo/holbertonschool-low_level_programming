@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_file - Creates a file with specified name and writes text content to it
+ * create_file - Creates a file with specified name and writes text content
  * @filename: The name of the file to create.M.
  * @text_content: A NULL terminated string to write to the file.LP.
  *
