@@ -1,13 +1,14 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * errors - handle errors.
- * @fd_s: source file.
- * @fd_d: destination file.
- * @argv: array of arguments.
- * Return: void.
+ * errors - handle errors
+ * @fd_s: source file
+ * @fd_d: destination file
+ * @argv: array of arguments
+ * Return: void
  */
-void errors(int fd_s, int fd_d, char* argv[])
+void errors(int fd_s, int fd_d, char *argv[])
 {
     if (fd_s == -1)
     {
@@ -24,15 +25,15 @@ void errors(int fd_s, int fd_d, char* argv[])
 }
 
 /**
- * main - program that copies the content of one file to another.
- * @argc: number of arguments.
- * @argv: array of arguments.
- * Return: 0 (Always).
+ * main - program that copies the content of one file to another
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 0 (Always)
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-    const char* f_from = argv[1];
-    const char* f_to = argv[2];
+    const char *f_from = argv[1];
+    const char *f_to = argv[2];
     int fd_s, fd_d;
     char buf[1024];
     ssize_t nrd, nwr;
