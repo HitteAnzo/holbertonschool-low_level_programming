@@ -16,7 +16,7 @@
  */
 void handle_error(int fd_s, int fd_d, char *argv[], int error_code, const char *message)
 {
-	void (argv);
+	(void)argv;
 
 	if (fd_s != -1)
 		close(fd_s);
