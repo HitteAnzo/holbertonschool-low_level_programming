@@ -7,11 +7,11 @@ textfile - reads a text file and prints the letters.
 *
 * Return : numbers of letters printed, 0 if failure.
 */
-ssize_t read_textfile(const char* filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t n_read, n_written;
-	char* buffer;
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
