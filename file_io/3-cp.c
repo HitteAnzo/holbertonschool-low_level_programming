@@ -9,7 +9,6 @@
  * @fd_s: source file descriptor
  * @fd_d: destination file descriptor
  * @argv: array of arguments
- * Return: void
  */
 void errors(int fd_s, int fd_d, char *argv[])
 {
@@ -27,10 +26,10 @@ void errors(int fd_s, int fd_d, char *argv[])
 }
 
 /**
- * main - program that copies the content of one file to another
+ * main - copies content from one file to another
  * @argc: number of arguments
  * @argv: array of arguments
- * Return: 0 (Always)
+ * Return: 0 on success
  */
 int main(int argc, char *argv[])
 {
@@ -46,10 +45,10 @@ int main(int argc, char *argv[])
 	fd_s = open(argv[1], O_RDONLY);
 	fd_d = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	errors(fd_s, fd_d, argv);
-	while ((nrd = read(fd_s, buf, sizeof(buf))) > 0)
+	while ((nrd = read(fd_s, buf, 1024)) > 0)
 	{
 		nwr = write(fd_d, buf, nrd);
-		if (nwr == -1)
+		if (nwr != nrd)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fd_s);
@@ -57,21 +56,9 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	if (nrd == -1)
+	if (nrd == -1 || close(fd_s) == -1 || close(fd_d) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		close(fd_s);
-		close(fd_d);
-		exit(98);
-	}
-	if (close(fd_s) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_s);
-		exit(100);
-	}
-	if (close(fd_d) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_d);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", nrd == -1 ? fd_s : fd_d);
 		exit(100);
 	}
 	return (0);
